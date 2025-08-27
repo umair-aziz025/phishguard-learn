@@ -124,4 +124,165 @@ export const quizData: QuizQuestion[] = [
     correctAnswer: "b",
     explanation: "Hovering over links allows you to preview the destination without actually visiting potentially malicious websites.",
   },
+  {
+    question: "You receive a text message from your 'bank' asking you to call a number to verify suspicious activity. What should you do?",
+    options: [
+      {
+        value: "a",
+        text: "Call the number immediately to protect your account",
+      },
+      {
+        value: "b",
+        text: "Call your bank using the official number from their website or your card",
+      },
+      {
+        value: "c",
+        text: "Reply to the text with your account information",
+      },
+      {
+        value: "d",
+        text: "Wait and see if they send another message",
+      },
+    ],
+    correctAnswer: "b",
+    explanation: "Always use official contact information from trusted sources rather than numbers provided in suspicious messages.",
+  },
+  {
+    question: "Which domain name is legitimate for Netflix?",
+    options: [
+      {
+        value: "a",
+        text: "netfllx.com",
+      },
+      {
+        value: "b",
+        text: "netflix-security.com",
+      },
+      {
+        value: "c",
+        text: "netflix.com",
+      },
+      {
+        value: "d",
+        text: "netfl1x.com",
+      },
+    ],
+    correctAnswer: "c",
+    explanation: "Only netflix.com is the legitimate domain. The others use character substitution or additional words to deceive users.",
+  },
+  {
+    question: "What is 'spear phishing'?",
+    options: [
+      {
+        value: "a",
+        text: "A generic phishing attack sent to thousands of people",
+      },
+      {
+        value: "b",
+        text: "A targeted phishing attack aimed at specific individuals or organizations",
+      },
+      {
+        value: "c",
+        text: "A phishing attack that uses only phone calls",
+      },
+      {
+        value: "d",
+        text: "A phishing attack that targets social media accounts only",
+      },
+    ],
+    correctAnswer: "b",
+    explanation: "Spear phishing is a highly targeted attack that uses specific information about the victim to make the attack more convincing.",
+  },
+  {
+    question: "Which of these social engineering tactics involves impersonating someone in authority?",
+    options: [
+      {
+        value: "a",
+        text: "Pretexting",
+      },
+      {
+        value: "b",
+        text: "Baiting",
+      },
+      {
+        value: "c",
+        text: "Tailgating",
+      },
+      {
+        value: "d",
+        text: "Quid pro quo",
+      },
+    ],
+    correctAnswer: "a",
+    explanation: "Pretexting involves creating a fabricated scenario (often impersonating authority) to engage a victim and steal information.",
+  },
+  {
+    question: "What should you do if you accidentally clicked on a suspicious link?",
+    options: [
+      {
+        value: "a",
+        text: "Close the browser and hope for the best",
+      },
+      {
+        value: "b",
+        text: "Immediately change passwords and run antivirus scans",
+      },
+      {
+        value: "c",
+        text: "Continue browsing normally",
+      },
+      {
+        value: "d",
+        text: "Only worry if you entered personal information",
+      },
+    ],
+    correctAnswer: "b",
+    explanation: "Quick action is essential: change passwords, run security scans, and monitor accounts for suspicious activity.",
+  },
+  {
+    question: "Which email characteristic is NOT typically a red flag for phishing?",
+    options: [
+      {
+        value: "a",
+        text: "Generic greeting like 'Dear Customer'",
+      },
+      {
+        value: "b",
+        text: "Urgent language demanding immediate action",
+      },
+      {
+        value: "c",
+        text: "Professional email signature with contact information",
+      },
+      {
+        value: "d",
+        text: "Unexpected attachments or links",
+      },
+    ],
+    correctAnswer: "c",
+    explanation: "Professional signatures are normal for legitimate emails. However, be aware that scammers can copy them too.",
+  },
+  {
+    question: "What is 'whaling' in cybersecurity?",
+    options: [
+      {
+        value: "a",
+        text: "Attacking underwater internet cables",
+      },
+      {
+        value: "b",
+        text: "Targeting high-profile individuals like executives or celebrities",
+      },
+      {
+        value: "c",
+        text: "Using very large email campaigns",
+      },
+      {
+        value: "d",
+        text: "Attacking maritime industry companies",
+      },
+    ],
+    correctAnswer: "b",
+    explanation: "Whaling specifically targets high-value individuals like CEOs, executives, or celebrities who have access to sensitive information or large amounts of money.",
+  }
 ];

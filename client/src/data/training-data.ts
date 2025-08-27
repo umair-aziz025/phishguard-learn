@@ -10,15 +10,19 @@ export interface TrainingModule {
     }[];
   };
   duration: string;
-  objectives: string[];
+  objectives?: string[];
+  icon?: any;
+  color?: string;
 }
 
 export const trainingModules: TrainingModule[] = [
   {
     id: 1,
-    title: "What is Phishing?",
+    title: "Module 1: What is Phishing?",
     description: "Learn the basics of phishing attacks, common tactics, and why they're so effective.",
     duration: "15 minutes",
+    icon: "Book",
+    color: "primary",
     objectives: [
       "Define phishing and understand its purpose",
       "Identify common phishing attack vectors",
@@ -44,9 +48,11 @@ export const trainingModules: TrainingModule[] = [
   },
   {
     id: 2,
-    title: "Recognizing Phishing Attempts",
+    title: "Module 2: Recognizing Phishing",
     description: "Identify red flags in emails, websites, and messages that indicate phishing attempts.",
     duration: "20 minutes",
+    icon: "Search",
+    color: "accent",
     objectives: [
       "Identify suspicious email characteristics",
       "Recognize fake websites and URLs",
@@ -73,9 +79,11 @@ export const trainingModules: TrainingModule[] = [
   },
   {
     id: 3,
-    title: "Social Engineering Tactics",
+    title: "Module 3: Social Engineering",
     description: "Understand psychological manipulation tactics used by cybercriminals.",
     duration: "18 minutes",
+    icon: "Users",
+    color: "destructive",
     objectives: [
       "Understand social engineering principles",
       "Recognize manipulation techniques",
