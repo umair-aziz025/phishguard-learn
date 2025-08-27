@@ -148,7 +148,7 @@ PhishGuard Learn follows a **cybersecurity-focused design approach**:
 ### Production Build
 ```bash
 npm run build
-npm start
+npm start or npx tsx server/index.ts
 ```
 
 ## 🤝 Contributing
@@ -181,16 +181,6 @@ We welcome contributions! Please follow these steps:
 - Built with feedback from cybersecurity professionals
 - Inspired by real-world phishing attack scenarios
 - Thanks to the open-source community for the amazing tools and libraries
-
-## 📊 Project Status
-
-- ✅ Core training modules implemented
-- ✅ Interactive quiz system
-- ✅ Responsive design
-- ✅ Best practices guide
-- 🔄 Advanced analytics (in progress)
-- 🔄 Multi-language support (planned)
-- 🔄 Admin dashboard (planned)
 
 ---
 
