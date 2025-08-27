@@ -72,9 +72,6 @@ npm start
 
 # Type checking
 npm run check
-
-# Database operations
-npm run db:push
 ```
 
 ## 🛠️ Tech Stack
