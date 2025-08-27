@@ -1,0 +1,111 @@
+Great 🚀 Here’s a **sample sitemap + wireframe flow** you can forward to your agent along with the earlier prompt. This will give them a **clear structure + navigation flow** so they know exactly how to design it:
+
+---
+
+# **Phishing Awareness Training Website – Sitemap & Wireframe Flow**
+
+### **1. Homepage (Landing Page)**
+
+* **Hero Section**
+
+  * Title: *“Spot the Phish. Stay Secure.”*
+  * Subtitle: Short engaging text (e.g., *“Learn how to identify phishing attacks and protect yourself online.”*)
+  * CTA button: *“Start Training”*
+  * Animated background (cyber waves, particles, or abstract tech lines)
+
+* **Quick Overview Section**
+
+  * 3 columns:
+
+    * **What is Phishing?**
+    * **Why It’s Dangerous**
+    * **How We Help You Stay Safe**
+
+* **Scroll Animation / Parallax Section**
+
+  * Simple illustration of an email → turning into a phishing attempt → blocked by a shield.
+
+---
+
+### **2. Training Modules**
+
+* **Module 1: What is Phishing?**
+
+  * Interactive infographic with popups explaining terms.
+* **Module 2: How to Recognize Phishing Emails/Websites**
+
+  * Side-by-side comparison: *Real vs Fake Email*.
+* **Module 3: Social Engineering Tactics**
+
+  * Animated cards (hover = reveal explanation).
+
+---
+
+### **3. Best Practices (Tips & Tricks)**
+
+* Grid of **cards/tiles** with tips like:
+
+  * “Check the sender’s email address.”
+  * “Don’t click suspicious links.”
+  * “Verify website URLs.”
+* Hover animations (icons change color, pop effects).
+
+---
+
+### **4. Real-World Examples (Spot the Phish)**
+
+* **Carousel / Slider**
+
+  * Show screenshots of phishing emails with **red flag highlights**.
+* **Interactive Challenge**
+
+  * User clicks on suspicious elements → gets instant feedback.
+
+---
+
+### **5. Quiz Section**
+
+* Multiple-choice interactive quiz (5–10 questions).
+* Smooth animations (progress bar + instant feedback).
+* Result page:
+
+  * Score + **badge/emoji reward** (Gamification).
+  * CTA: *“Try Again”* or *“Continue Learning”*.
+
+---
+
+### **6. About / Credits**
+
+* Short section introducing the project team.
+* Thanks/acknowledgments.
+
+---
+
+# **Navigation Flow (Top Menu)**
+
+* **Home**
+* **Training Modules**
+* **Best Practices**
+* **Examples**
+* **Quiz**
+* **About**
+
+---
+
+# **Wireframe Style Guide (for developer)**
+
+* **Theme Option 1:** Dark mode with neon accents (cybersecurity vibes 🔒💻).
+* **Theme Option 2:** Clean, light, professional with bold typography.
+* **Fonts:** Poppins / Inter / Montserrat.
+* **Animations:**
+
+  * Smooth scroll, fade-in/out transitions.
+  * Framer Motion for elements sliding into view.
+  * Micro-interactions (buttons hover, icons bounce).
+* **Responsive Design:** Must look perfect on desktop, tablet, and mobile.
+
+---
+
+👉 With this **prompt + sitemap + wireframe flow**, your agent has everything they need to create a **sexy, modern, and professional phishing awareness training website**.
+
+Do you also want me to **write the actual training content (modules, quiz questions, tips, examples)** so you can just plug it into the website?

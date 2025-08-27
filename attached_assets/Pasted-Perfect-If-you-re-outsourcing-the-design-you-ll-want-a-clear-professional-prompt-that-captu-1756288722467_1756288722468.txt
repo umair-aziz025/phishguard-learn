@@ -1,0 +1,54 @@
+Perfect 🔥 If you’re outsourcing the design, you’ll want a **clear, professional prompt** that captures your vision (elegant, modern, responsive, animated). Here’s a ready-to-forward prompt for your agent:
+
+---
+
+### **Prompt for Phishing Awareness Training Website**
+
+We need a **professional, elegant, and visually engaging website** for our **Phishing Awareness Training (Task 2)**. The site should look **modern, sleek, and “sexy” in design** with smooth animations and a fully **responsive layout** that works seamlessly across desktop, tablet, and mobile.
+
+**Core Requirements:**
+
+1. **Homepage (Landing Page):**
+
+   * Eye-catching hero section with bold typography, animations, and modern illustrations.
+   * Engaging tagline like *“Spot the Phish. Stay Secure.”*
+   * Subtle animated background (gradient waves, particles, or minimal cyber-security theme).
+
+2. **Training Modules:**
+
+   * Sections to explain **what phishing is**, **how to recognize phishing emails and fake websites**, and **social engineering tactics**.
+   * Interactive animations/icons for better understanding.
+
+3. **Best Practices Page:**
+
+   * Visually appealing cards or tiles with **tips to avoid phishing**.
+   * Hover effects and smooth transitions.
+
+4. **Real-World Examples:**
+
+   * Carousel or slider with screenshots of phishing emails/websites (with red flags highlighted).
+   * Interactive “Spot the Phish” game (users click on suspicious elements).
+
+5. **Interactive Quizzes:**
+
+   * Simple, fun quiz interface with animations (progress bar, instant feedback).
+   * Show results at the end with **badges/achievements**.
+
+6. **Design & Aesthetic:**
+
+   * Dark + neon accent theme (cyber-security vibes) OR light minimal professional theme (your choice).
+   * Clean typography (e.g., Poppins, Inter, Montserrat).
+   * Smooth scroll, fade-in/out animations, micro-interactions.
+
+7. **Tech Stack (preferred):**
+
+   * **Frontend:** React.js (with TailwindCSS or modern CSS framework).
+   * **Animations:** Framer Motion / GSAP.
+   * **Responsive Design:** Mobile-first, fluid grid system.
+
+**Goal:**
+Make the training **engaging, interactive, and memorable** — not a boring text-only module. The site should **feel premium, elegant, and user-friendly**, while effectively teaching users how to recognize and defend against phishing attacks.
+
+---
+
+⚡Would you like me to also prepare a **sample sitemap + wireframe flow** (like what pages and navigation your website should have), so your agent has a crystal-clear blueprint?
