@@ -148,15 +148,7 @@ PhishGuard Learn follows a **cybersecurity-focused design approach**:
 ### Production Build
 ```bash
 npm run build
-npm start
-```
-
-### Environment Variables
-Create a `.env` file in the root directory:
-```env
-NODE_ENV=production
-PORT=5000
-DATABASE_URL=your_database_url
+npm start or npx tsx server/index.ts
 ```
 
 ## 🤝 Contributing
@@ -176,33 +168,19 @@ We welcome contributions! Please follow these steps:
 - Test your changes thoroughly
 - Update documentation as needed
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
 **Umair Aziz**  
 *Cybersecurity Analyst and Ethical Hacker*
 
 - GitHub: [@umair-aziz025](https://github.com/umair-aziz025)
-- Email: contact@phishguard.com
+- LinkedIn: https://www.linkedin.com/in/umairaziz001
 
 ## 🙏 Acknowledgments
 
 - Built with feedback from cybersecurity professionals
 - Inspired by real-world phishing attack scenarios
 - Thanks to the open-source community for the amazing tools and libraries
-
-## 📊 Project Status
-
-- ✅ Core training modules implemented
-- ✅ Interactive quiz system
-- ✅ Responsive design
-- ✅ Best practices guide
-- 🔄 Advanced analytics (in progress)
-- 🔄 Multi-language support (planned)
-- 🔄 Admin dashboard (planned)
 
 ---
 
