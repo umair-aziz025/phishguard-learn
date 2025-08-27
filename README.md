@@ -186,7 +186,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 *Cybersecurity Analyst and Ethical Hacker*
 
 - GitHub: [@umair-aziz025](https://github.com/umair-aziz025)
-- Email: contact@phishguard.com
+- LinkedIn: https://www.linkedin.com/in/umairaziz001
 
 ## 🙏 Acknowledgments
 
