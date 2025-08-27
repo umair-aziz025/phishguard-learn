@@ -1,4 +1,4 @@
-import { Shield, Twitter, Linkedin, Github } from "lucide-react";
+import { Shield, Linkedin, Github, Globe } from "lucide-react";
 
 export default function Footer() {
   const handleSocialShare = (platform: string) => {
@@ -38,21 +38,21 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <button 
-                onClick={() => handleSocialShare('twitter')}
+                onClick={() => window.open('https://umairaziz-cyber-portfolio.vercel.app/', '_blank')}
                 className="text-muted-foreground hover:text-primary transition-colors"
-                data-testid="link-twitter"
+                data-testid="link-portfolio"
               >
-                <Twitter className="h-5 w-5" />
+                <Globe className="h-5 w-5" />
               </button>
               <button 
-                onClick={() => handleSocialShare('linkedin')}
+                onClick={() => window.open('https://www.linkedin.com/in/umairaziz001/', '_blank')}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 data-testid="link-linkedin"
               >
                 <Linkedin className="h-5 w-5" />
               </button>
               <button 
-                onClick={() => handleSocialShare('github')}
+                onClick={() => window.open('https://github.com/umair-aziz025', '_blank')}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 data-testid="link-github"
               >
@@ -147,7 +147,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 PhishGuard. All rights reserved. Built for cybersecurity education and awareness.</p>
+          <p>&copy; 2025 PhishGuard. All rights reserved. Built for cybersecurity education and awareness.</p>
         </div>
       </div>
     </footer>

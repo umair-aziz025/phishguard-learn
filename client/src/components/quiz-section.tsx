@@ -15,7 +15,7 @@ export default function QuizSection() {
   const [score, setScore] = useState(0);
 
   const totalQuestions = quizData.length;
-  const progress = ((currentQuestion + 1) / totalQuestions) * 100;
+  const progress = (answers.length / totalQuestions) * 100;
 
   const handleAnswerSelect = (value: string) => {
     setSelectedAnswer(value);

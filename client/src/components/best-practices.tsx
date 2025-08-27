@@ -77,8 +77,21 @@ export default function BestPractices() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-card border border-border hover:border-primary/50 transition-all duration-300 group h-full">
-                  <CardContent className="p-6">
+                <Card className="bg-card border border-border hover:border-primary/50 transition-all duration-300 group h-full hover:scale-105 relative overflow-hidden">
+                  <div className="floating-particles">
+                    {[...Array(4)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="particle"
+                        style={{
+                          left: `${Math.random() * 100}%`,
+                          animationDelay: `${Math.random() * 3}s`,
+                          animationDuration: `${3 + Math.random() * 2}s`
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <CardContent className="p-6 relative z-10">
                     <div className={`w-12 h-12 bg-${practice.color}/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-${practice.color}/30 transition-colors`}>
                       <Icon className={`text-${practice.color} h-6 w-6`} />
                     </div>

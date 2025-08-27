@@ -133,6 +133,8 @@ export default function TrainingModules() {
   const [currentQuiz, setCurrentQuiz] = useState(0);
   const [quizAnswer, setQuizAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const [currentCardSet, setCurrentCardSet] = useState(0);
+  const [autoScrollCards, setAutoScrollCards] = useState(true);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -153,6 +155,17 @@ export default function TrainingModules() {
     }
     return () => clearInterval(interval);
   }, [autoScroll, selectedModule, currentSection]);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (autoScrollCards && !selectedModule) {
+      const totalSets = Math.ceil(allModules.length / 3);
+      interval = setInterval(() => {
+        setCurrentCardSet(prev => (prev + 1) % totalSets);
+      }, 4000);
+    }
+    return () => clearInterval(interval);
+  }, [autoScrollCards, selectedModule, allModules.length]);
 
   const handleModuleClick = (moduleId: number) => {
     setSelectedModule(moduleId);
@@ -206,6 +219,20 @@ export default function TrainingModules() {
     } else {
       setShowQuiz(false);
     }
+  };
+
+  const nextCardSet = () => {
+    const totalSets = Math.ceil(allModules.length / 3);
+    setCurrentCardSet(prev => (prev + 1) % totalSets);
+  };
+
+  const prevCardSet = () => {
+    const totalSets = Math.ceil(allModules.length / 3);
+    setCurrentCardSet(prev => (prev - 1 + totalSets) % totalSets);
+  };
+
+  const toggleAutoScrollCards = () => {
+    setAutoScrollCards(!autoScrollCards);
   };
 
   if (selectedModule) {
@@ -366,7 +393,7 @@ export default function TrainingModules() {
                           </div>
                         </div>
                         
-                        <AnimatePresence mode="wait">
+                        <AnimatePresence>
                           <motion.div
                             key={currentSection}
                             initial={{ opacity: 0, x: 20 }}
@@ -450,56 +477,111 @@ export default function TrainingModules() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allModules.map((module, index) => {
-            const getIcon = (iconName: string) => {
-              switch (iconName) {
-                case "Book": return Book;
-                case "Search": return Search;
-                case "Users": return Users;
-                case "Shield": return Shield;
-                case "AlertTriangle": return AlertTriangle;
-                case "Brain": return Brain;
-                default: return Book;
-              }
-            };
-            const Icon = module.icon ? getIcon(module.icon) : Book;
-            return (
-              <motion.div
-                key={module.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+        <div className="relative">
+          <div className="flex justify-between items-center mb-6">
+            <div className="flex items-center space-x-4">
+              <Button 
+                onClick={toggleAutoScrollCards}
+                variant={autoScrollCards ? "default" : "outline"}
+                size="sm"
+                data-testid="button-auto-scroll-cards"
               >
-                <Card 
-                  className="bg-background border border-border card-glow cursor-pointer transition-all duration-300 hover:scale-105 h-full"
-                  onClick={() => handleModuleClick(module.id)}
-                  data-testid={`card-module-${module.id}`}
-                >
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className={`w-12 h-12 bg-${module.color || 'primary'}/20 rounded-lg flex items-center justify-center`}>
-                        <Icon className={`text-${module.color || 'primary'} h-6 w-6`} />
+                <Play className="mr-2 h-4 w-4" />
+                {autoScrollCards ? 'Stop Auto' : 'Auto Scroll'}
+              </Button>
+              <span className="text-sm text-muted-foreground">
+                Showing {currentCardSet * 3 + 1}-{Math.min((currentCardSet + 1) * 3, allModules.length)} of {allModules.length} modules
+              </span>
+            </div>
+            
+            <div className="flex space-x-2">
+              <Button 
+                onClick={prevCardSet}
+                variant="outline"
+                size="sm"
+                disabled={currentCardSet === 0}
+                data-testid="button-prev-cards"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              <Button 
+                onClick={nextCardSet}
+                variant="outline"
+                size="sm"
+                disabled={currentCardSet >= Math.ceil(allModules.length / 3) - 1}
+                data-testid="button-next-cards"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px]">
+            <AnimatePresence>
+              {allModules.slice(currentCardSet * 3, (currentCardSet + 1) * 3).map((module, index) => {
+                const getIcon = (iconName: string) => {
+                  switch (iconName) {
+                    case "Book": return Book;
+                    case "Search": return Search;
+                    case "Users": return Users;
+                    case "Shield": return Shield;
+                    case "AlertTriangle": return AlertTriangle;
+                    case "Brain": return Brain;
+                    default: return Book;
+                  }
+                };
+                const Icon = module.icon ? getIcon(module.icon) : Book;
+                return (
+                  <motion.div
+                    key={`${currentCardSet}-${module.id}`}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card 
+                      className="bg-background border border-border card-glow cursor-pointer transition-all duration-300 hover:scale-105 h-full relative overflow-hidden"
+                      onClick={() => handleModuleClick(module.id)}
+                      data-testid={`card-module-${module.id}`}
+                    >
+                      <div className="floating-particles">
+                        {[...Array(6)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="particle"
+                            style={{
+                              left: `${Math.random() * 100}%`,
+                              animationDelay: `${Math.random() * 3}s`,
+                              animationDuration: `${3 + Math.random() * 2}s`
+                            }}
+                          />
+                        ))}
                       </div>
-                      <Badge variant="secondary" className="text-xs">
-                        Module {module.id}
-                      </Badge>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3">{module.title}</h3>
-                    <p className="text-muted-foreground mb-4 flex-grow">{module.description}</p>
-                    <div className="flex items-center justify-between mt-auto">
-                      <div className="flex items-center text-primary text-sm">
-                        <Clock className="mr-2 h-4 w-4" />
-                        <span>{module.duration}</span>
-                      </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
+                      <CardContent className="p-6 flex flex-col h-full relative z-10">
+                        <div className="flex items-center justify-between mb-4">
+                          <div className={`w-12 h-12 bg-${module.color || 'primary'}/20 rounded-lg flex items-center justify-center`}>
+                            <Icon className={`text-${module.color || 'primary'} h-6 w-6`} />
+                          </div>
+                          <Badge variant="secondary" className="text-xs">
+                            Module {module.id}
+                          </Badge>
+                        </div>
+                        <h3 className="text-xl font-semibold mb-3">{module.title}</h3>
+                        <p className="text-muted-foreground mb-4 flex-grow">{module.description}</p>
+                        <div className="flex items-center justify-between mt-auto">
+                          <div className="flex items-center text-primary text-sm">
+                            <Clock className="mr-2 h-4 w-4" />
+                            <span>{module.duration}</span>
+                          </div>
+                          <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>

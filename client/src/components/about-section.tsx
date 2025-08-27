@@ -5,14 +5,9 @@ import { Button } from "@/components/ui/button";
 
 const teamMembers = [
   {
-    name: "Alex Chen",
-    role: "Security Engineer",
+    name: "Umair Aziz",
+    role: "Cybersecurity Analyst and Ethical Hacker",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
-  },
-  {
-    name: "Sarah Johnson",
-    role: "UX Designer",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
   },
 ];
 
@@ -51,8 +46,21 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-background border border-border p-6">
-              <CardContent className="p-0">
+            <Card className="bg-background border border-border p-6 hover:scale-105 transition-all duration-300 relative overflow-hidden">
+              <div className="floating-particles">
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="particle"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 3}s`,
+                      animationDuration: `${3 + Math.random() * 2}s`
+                    }}
+                  />
+                ))}
+              </div>
+              <CardContent className="p-0 relative z-10">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="text-primary h-8 w-8" />
                 </div>
@@ -68,8 +76,21 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-background border border-border p-6">
-              <CardContent className="p-0">
+            <Card className="bg-background border border-border p-6 hover:scale-105 transition-all duration-300 relative overflow-hidden">
+              <div className="floating-particles">
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="particle"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 3}s`,
+                      animationDuration: `${3 + Math.random() * 2}s`
+                    }}
+                  />
+                ))}
+              </div>
+              <CardContent className="p-0 relative z-10">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="text-accent h-8 w-8" />
                 </div>
@@ -93,7 +114,7 @@ export default function AboutSection() {
             {teamMembers.map((member, index) => (
               <motion.div 
                 key={member.name}
-                className="text-center"
+                className="text-center hover:scale-110 transition-all duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
