@@ -557,17 +557,17 @@ export default function TrainingModules() {
                           />
                         ))}
                       </div>
-                      <CardContent className="p-6 flex flex-col h-full relative z-10">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className={`w-12 h-12 bg-${module.color || 'primary'}/20 rounded-lg flex items-center justify-center`}>
-                            <Icon className={`text-${module.color || 'primary'} h-6 w-6`} />
+                      <CardContent className="p-4 flex flex-col h-full relative z-10">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className={`w-10 h-10 bg-${module.color || 'primary'}/20 rounded-lg flex items-center justify-center`}>
+                            <Icon className={`text-${module.color || 'primary'} h-5 w-5`} />
                           </div>
                           <Badge variant="secondary" className="text-xs">
                             Module {module.id}
                           </Badge>
                         </div>
-                        <h3 className="text-xl font-semibold mb-3">{module.title}</h3>
-                        <p className="text-muted-foreground mb-4 flex-grow">{module.description}</p>
+                        <h3 className="text-lg font-semibold mb-2">{module.title}</h3>
+                        <p className="text-muted-foreground mb-3 flex-grow text-sm">{module.description}</p>
                         <div className="flex items-center justify-between mt-auto">
                           <div className="flex items-center text-primary text-sm">
                             <Clock className="mr-2 h-4 w-4" />

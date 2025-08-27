@@ -6,7 +6,29 @@ export default function Footer() {
   };
 
   const downloadGuide = () => {
-    console.log("Downloading guide");
+    // Create a simple PDF guide content
+    const guideContent = `
+Phishing Awareness Guide
+
+1. Check sender's email address carefully
+2. Verify URLs before clicking
+3. Be suspicious of urgent language
+4. Use two-factor authentication
+5. Keep software updated
+6. Verify phone calls independently
+
+For more training, visit our platform.
+    `;
+    
+    const blob = new Blob([guideContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'phishing-awareness-guide.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
   };
 
   const viewCertificate = () => {
@@ -113,15 +135,6 @@ export default function Footer() {
                   data-testid="link-download-guide"
                 >
                   Download Guide
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={viewCertificate}
-                  className="hover:text-primary transition-colors"
-                  data-testid="link-certificate"
-                >
-                  Certificate
                 </button>
               </li>
               <li>

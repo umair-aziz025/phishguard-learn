@@ -91,12 +91,12 @@ export default function BestPractices() {
                       />
                     ))}
                   </div>
-                  <CardContent className="p-6 relative z-10">
-                    <div className={`w-12 h-12 bg-${practice.color}/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-${practice.color}/30 transition-colors`}>
-                      <Icon className={`text-${practice.color} h-6 w-6`} />
+                  <CardContent className="p-4 relative z-10">
+                    <div className={`w-10 h-10 bg-${practice.color}/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-${practice.color}/30 transition-colors`}>
+                      <Icon className={`text-${practice.color} h-5 w-5`} />
                     </div>
-                    <h3 className="text-lg font-semibold mb-3">{practice.title}</h3>
-                    <p className="text-muted-foreground text-sm">{practice.description}</p>
+                    <h3 className="text-md font-semibold mb-2">{practice.title}</h3>
+                    <p className="text-muted-foreground text-xs">{practice.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>

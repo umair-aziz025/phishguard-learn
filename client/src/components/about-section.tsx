@@ -46,7 +46,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-background border border-border p-6 hover:scale-105 transition-all duration-300 relative overflow-hidden">
+            <Card className="bg-background border border-border p-4 hover:scale-105 transition-all duration-300 relative overflow-hidden">
               <div className="floating-particles">
                 {[...Array(4)].map((_, i) => (
                   <div
@@ -61,10 +61,10 @@ export default function AboutSection() {
                 ))}
               </div>
               <CardContent className="p-0 relative z-10">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-primary h-8 w-8" />
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <GraduationCap className="text-primary h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Educational Focus</h3>
+                <h3 className="text-lg font-semibold mb-2">Educational Focus</h3>
                 <p className="text-muted-foreground">Interactive learning modules designed by cybersecurity experts to maximize retention and practical application.</p>
               </CardContent>
             </Card>
@@ -76,7 +76,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-background border border-border p-6 hover:scale-105 transition-all duration-300 relative overflow-hidden">
+            <Card className="bg-background border border-border p-4 hover:scale-105 transition-all duration-300 relative overflow-hidden">
               <div className="floating-particles">
                 {[...Array(4)].map((_, i) => (
                   <div
@@ -91,10 +91,10 @@ export default function AboutSection() {
                 ))}
               </div>
               <CardContent className="p-0 relative z-10">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-accent h-8 w-8" />
+                <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="text-accent h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Community Driven</h3>
+                <h3 className="text-lg font-semibold mb-2">Community Driven</h3>
                 <p className="text-muted-foreground">Built with feedback from security professionals and updated regularly with the latest threat intelligence.</p>
               </CardContent>
             </Card>
