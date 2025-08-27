@@ -1,4 +1,4 @@
-import { Shield, Linkedin, Github, Globe } from "lucide-react";
+import { Linkedin, Github, Globe } from "lucide-react";
 
 export default function Footer() {
   const handleSocialShare = (platform: string) => {
@@ -52,7 +52,7 @@ For more training, visit our platform.
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <Shield className="text-primary h-6 w-6 mr-2" />
+              <span className="text-primary text-2xl mr-2">🎣</span>
               <span className="text-xl font-bold">PhishGuard</span>
             </div>
             <p className="text-muted-foreground mb-4">

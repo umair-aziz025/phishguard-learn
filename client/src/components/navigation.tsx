@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="text-xl font-bold text-primary flex items-center">
-                <Shield className="mr-2 h-6 w-6" />
+                <span className="mr-2 text-2xl">🎣</span>
                 PhishGuard
               </div>
             </div>
