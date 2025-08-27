@@ -161,6 +161,16 @@ For more training, visit our platform.
         
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; 2025 PhishGuard. All rights reserved. Built for cybersecurity education and awareness.</p>
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs">
+            <p>Developed during</p>
+            <button 
+              onClick={() => window.open('https://www.codealpha.tech/', '_blank')}
+              className="text-primary hover:text-primary/80 font-semibold transition-colors"
+            >
+              CodeAlpha Cybersecurity Internship
+            </button>
+            <p>• Student ID: CA/SE1/2521 • Task 2: Phishing Awareness Training</p>
+          </div>
         </div>
       </div>
     </footer>
