@@ -70,3 +70,6 @@ vite.config.ts.*
 
 # TypeScript
 *.tsbuildinfo
+
+# Personal files
+LINKEDIN_POST.md
