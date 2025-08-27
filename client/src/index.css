@@ -103,6 +103,7 @@
     height: 100%;
     overflow: hidden;
     pointer-events: none;
+    z-index: -5;
   }
 
   .floating-particles {
@@ -125,6 +126,24 @@
     border-radius: 50%;
     opacity: 0.8;
     animation: floatUp 8s linear infinite, drift 4s ease-in-out infinite;
+  }
+
+  /* Hero section particles - these override the card particles for hero */
+  .particles .particle {
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 1) 0%, rgba(6, 182, 212, 0.8) 30%, rgba(6, 182, 212, 0.4) 60%, transparent 100%);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 
+      0 0 15px hsl(187, 85%, 53%, 0.8),
+      0 0 30px hsl(187, 85%, 53%, 0.6),
+      0 0 45px hsl(187, 85%, 53%, 0.4),
+      0 0 60px hsl(187, 85%, 53%, 0.2);
+    filter: blur(0.5px);
+    z-index: -10;
+    animation: glow 3s ease-in-out infinite alternate, dimming 5s ease-in-out infinite, sparkle 2s ease-in-out infinite;
+    opacity: 0.9;
   }
 
   .particle::before {
@@ -215,6 +234,48 @@
     }
     100% {
       transform: translateX(0) rotate(360deg);
+    }
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 
+        0 0 10px hsl(187, 85%, 53%, 0.6),
+        0 0 20px hsl(187, 85%, 53%, 0.4),
+        0 0 30px hsl(187, 85%, 53%, 0.2);
+    }
+    100% {
+      box-shadow: 
+        0 0 20px hsl(187, 85%, 53%, 0.8),
+        0 0 40px hsl(187, 85%, 53%, 0.6),
+        0 0 60px hsl(187, 85%, 53%, 0.4);
+    }
+  }
+
+  @keyframes dimming {
+    0% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes sparkle {
+    0% {
+      transform: scale(1) rotate(0deg);
+      filter: brightness(1) blur(0.5px);
+    }
+    50% {
+      transform: scale(1.3) rotate(180deg);
+      filter: brightness(1.5) blur(0.2px);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+      filter: brightness(1) blur(0.5px);
     }
   }
 }

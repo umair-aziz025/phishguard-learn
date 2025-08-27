@@ -66,7 +66,7 @@ export default function BestPractices() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {bestPractices.map((practice, index) => {
             const Icon = practice.icon;
             return (
@@ -77,26 +77,15 @@ export default function BestPractices() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-card border border-border hover:border-primary/50 transition-all duration-300 group h-full hover:scale-105 relative overflow-hidden">
-                  <div className="floating-particles">
-                    {[...Array(4)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="particle"
-                        style={{
-                          left: `${Math.random() * 100}%`,
-                          animationDelay: `${Math.random() * 3}s`,
-                          animationDuration: `${3 + Math.random() * 2}s`
-                        }}
-                      />
-                    ))}
-                  </div>
-                  <CardContent className="p-4 relative z-10">
-                    <div className={`w-10 h-10 bg-${practice.color}/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-${practice.color}/30 transition-colors`}>
+                <Card className="bg-card border border-border hover:border-primary/50 transition-all duration-300 group hover:scale-105 hover:shadow-lg h-24">
+                  <CardContent className="p-4 flex items-center space-x-4 h-full">
+                    <div className={`w-10 h-10 bg-${practice.color}/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-${practice.color}/30 transition-colors`}>
                       <Icon className={`text-${practice.color} h-5 w-5`} />
                     </div>
-                    <h3 className="text-md font-semibold mb-2">{practice.title}</h3>
-                    <p className="text-muted-foreground text-xs">{practice.description}</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-semibold mb-1 truncate">{practice.title}</h3>
+                      <p className="text-muted-foreground text-xs line-clamp-2 leading-relaxed">{practice.description}</p>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>

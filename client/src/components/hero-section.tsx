@@ -2,22 +2,6 @@ import { motion } from "framer-motion";
 import { Play, Eye, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const Particle = ({ delay, left }: { delay: number; left: string }) => (
-  <motion.div
-    className="particle absolute"
-    style={{ left }}
-    animate={{
-      y: [-10, 10, -10],
-    }}
-    transition={{
-      duration: 6,
-      repeat: Infinity,
-      delay,
-      ease: "easeInOut",
-    }}
-  />
-);
-
 export default function HeroSection() {
   const scrollToTraining = () => {
     const element = document.querySelector('#training');
@@ -35,16 +19,6 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-cyber-gradient overflow-hidden">
-      <div className="particles">
-        {Array.from({ length: 10 }, (_, i) => (
-          <Particle 
-            key={i} 
-            delay={i * 0.5} 
-            left={`${10 + i * 8}%`} 
-          />
-        ))}
-      </div>
-      
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

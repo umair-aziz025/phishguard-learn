@@ -540,24 +540,11 @@ export default function TrainingModules() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <Card 
-                      className="bg-background border border-border card-glow cursor-pointer transition-all duration-300 hover:scale-105 h-full relative overflow-hidden"
+                      className="bg-background border border-border card-glow cursor-pointer transition-all duration-300 hover:scale-105 h-64 relative overflow-hidden"
                       onClick={() => handleModuleClick(module.id)}
                       data-testid={`card-module-${module.id}`}
                     >
-                      <div className="floating-particles">
-                        {[...Array(6)].map((_, i) => (
-                          <div
-                            key={i}
-                            className="particle"
-                            style={{
-                              left: `${Math.random() * 100}%`,
-                              animationDelay: `${Math.random() * 3}s`,
-                              animationDuration: `${3 + Math.random() * 2}s`
-                            }}
-                          />
-                        ))}
-                      </div>
-                      <CardContent className="p-4 flex flex-col h-full relative z-10">
+                      <CardContent className="p-4 flex flex-col h-full relative z-10 justify-between">
                         <div className="flex items-center justify-between mb-3">
                           <div className={`w-10 h-10 bg-${module.color || 'primary'}/20 rounded-lg flex items-center justify-center`}>
                             <Icon className={`text-${module.color || 'primary'} h-5 w-5`} />
@@ -566,8 +553,8 @@ export default function TrainingModules() {
                             Module {module.id}
                           </Badge>
                         </div>
-                        <h3 className="text-lg font-semibold mb-2">{module.title}</h3>
-                        <p className="text-muted-foreground mb-3 flex-grow text-sm">{module.description}</p>
+                        <h3 className="text-lg font-semibold mb-2 line-clamp-2">{module.title}</h3>
+                        <p className="text-muted-foreground mb-3 flex-grow text-sm line-clamp-3">{module.description}</p>
                         <div className="flex items-center justify-between mt-auto">
                           <div className="flex items-center text-primary text-sm">
                             <Clock className="mr-2 h-4 w-4" />

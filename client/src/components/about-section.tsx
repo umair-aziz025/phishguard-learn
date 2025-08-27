@@ -7,8 +7,9 @@ const teamMembers = [
   {
     name: "Umair Aziz",
     role: "Cybersecurity Analyst and Ethical Hacker",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+    image: "/profile.png",
   },
+  
 ];
 
 export default function AboutSection() {
@@ -47,19 +48,6 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <Card className="bg-background border border-border p-4 hover:scale-105 transition-all duration-300 relative overflow-hidden">
-              <div className="floating-particles">
-                {[...Array(4)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="particle"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 3}s`,
-                      animationDuration: `${3 + Math.random() * 2}s`
-                    }}
-                  />
-                ))}
-              </div>
               <CardContent className="p-0 relative z-10">
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
                   <GraduationCap className="text-primary h-6 w-6" />
@@ -77,19 +65,6 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <Card className="bg-background border border-border p-4 hover:scale-105 transition-all duration-300 relative overflow-hidden">
-              <div className="floating-particles">
-                {[...Array(4)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="particle"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 3}s`,
-                      animationDuration: `${3 + Math.random() * 2}s`
-                    }}
-                  />
-                ))}
-              </div>
               <CardContent className="p-0 relative z-10">
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Users className="text-accent h-6 w-6" />
